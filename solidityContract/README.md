@@ -7,7 +7,7 @@
 
 ![BaseAgentWallet](assets/AgentWallet.png)
 
-The first AI Agent-controlled wallet on Base (chainId 8453). A revolutionary smart wallet that allows users to deposit funds and grant permissions to AI agents to trade, swap, and send on their behalf, with a 0.5% protocol fee on all agent actions.
+The first AI Agent controlled wallet on Base . A revolutionary smart wallet that allows users to deposit funds and grant permissions to AI agents to trade, swap, and send on their behalf, with a 0.5% protocol fee on all agent actions.
 
 ## 🚀 Deployed Contracts
 
