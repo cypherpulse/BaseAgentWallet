@@ -1,6 +1,6 @@
 # Dependencies
 node_modules/
-lib/
+
 .pnp
 .pnp.js
 
@@ -142,3 +142,4 @@ forge-cache/
 # Remix
 build/
 .env.local
+*.ps1
