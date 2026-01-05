@@ -25,9 +25,6 @@ const Index = () => {
               0x387E...dCf0
             </a>
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            Every agent trade earns leaderboard points 🏆
-          </p>
         </div>
       </footer>
     </div>
