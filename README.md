@@ -6,6 +6,11 @@
 [![React](https://img.shields.io/badge/React-18.0+-blue)](https://reactjs.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
+## 🚀 Live Demo
+
+**BaseAgentWallet is now live!**  
+🔗 [https://base-agent-wallet.vercel.app/](https://base-agent-wallet.vercel.app/)
+
 ![BaseAgentWallet](assets/agent2.png)
 
 The first AI Agent-controlled wallet built on Base blockchain (chainId 8453). A revolutionary smart wallet that enables AI agents to securely trade, swap, and send on behalf of users with 0.5% protocol fees. Designed for automated trading strategies and DeFi interactions on Base Blockchain.
