@@ -6,7 +6,9 @@
 [![React](https://img.shields.io/badge/React-18.0+-blue)](https://reactjs.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-The first AI Agent-controlled wallet built on Base blockchain (chainId 8453). A revolutionary smart wallet that enables AI agents to securely trade, swap, and send on behalf of users with 0.5% protocol fees. Designed for automated trading strategies and DeFi interactions on Ethereum Layer 2.
+![BaseAgentWallet](assets/agent2.png)
+
+The first AI Agent-controlled wallet built on Base blockchain (chainId 8453). A revolutionary smart wallet that enables AI agents to securely trade, swap, and send on behalf of users with 0.5% protocol fees. Designed for automated trading strategies and DeFi interactions on Base Blockchain.
 
 ## Deployed Contracts
 
@@ -39,6 +41,8 @@ BaseAgentWallet is a smart contract system deployed on Base blockchain that allo
 - Emergency controls and security measures
 
 Built specifically for Base blockchain to leverage its fast, low-cost transactions for high-frequency AI trading strategies.
+
+![AI Agent Trading Overview](assets/agent3.png)
 
 ## Features
 
