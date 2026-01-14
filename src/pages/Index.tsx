@@ -12,15 +12,15 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 mt-12">
-        <div className="container mx-auto px-4 text-center">
+      <footer className="border-t border-border py-6 sm:py-8 mt-8 sm:mt-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-muted-foreground">
             Built on Base Sepolia • Contract:{" "}
             <a
               href="https://sepolia.basescan.org/address/0x387E59Ac9888DA71180fA7d55B0A9EdB4377dCf0"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-primary hover:underline"
+              className="font-mono text-primary hover:underline text-xs sm:text-sm break-all sm:break-normal"
             >
               0x387E...dCf0
             </a>
