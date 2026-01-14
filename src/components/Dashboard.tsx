@@ -22,11 +22,11 @@ export const Dashboard = () => {
   if (!isConnected) return null;
 
   return (
-    <div className="container mx-auto px-4 py-8 animate-fade-in">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 animate-fade-in">
       {/* Protocol Fee Info */}
-      <div className="card-base p-4 mb-6 bg-primary/5 border-primary/10">
-        <div className="flex items-center gap-3">
-          <Info className="w-5 h-5 text-primary flex-shrink-0" />
+      <div className="card-base p-3 sm:p-4 mb-4 sm:mb-6 bg-primary/5 border-primary/10">
+        <div className="flex items-start sm:items-center gap-3">
+          <Info className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
           <p className="text-sm">
             <span className="font-medium">0.5% protocol fee</span> on agent actions supports Base builders.
             Every trade = on-chain tx = leaderboard points! 🏆
@@ -35,18 +35,18 @@ export const Dashboard = () => {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+      <div className="flex gap-1 sm:gap-2 mb-4 sm:mb-6 overflow-x-auto pb-2 scrollbar-hide">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm whitespace-nowrap transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm whitespace-nowrap transition-all flex-shrink-0 ${
               activeTab === tab.id
                 ? "gradient-bg text-primary-foreground shadow-md"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
             }`}
           >
-            <tab.icon className="w-4 h-4" />
+            <tab.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             {tab.label}
           </button>
         ))}
