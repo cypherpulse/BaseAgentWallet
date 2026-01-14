@@ -53,36 +53,86 @@ export const WalletDashboard = () => {
   const formattedWalletBalance = walletBalance ? parseFloat(formatEther(walletBalance.value)).toFixed(4) : "0.0000";
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="stat-card">
-          <div className="flex items-center gap-3 text-muted-foreground"><Wallet className="w-5 h-5" /><span className="text-sm font-medium">Your Wallet</span></div>
-          <div className="flex items-baseline gap-2"><span className="text-3xl font-bold">{formattedWalletBalance}</span><span className="text-muted-foreground">ETH</span></div>
+          <div className="flex items-center gap-2 sm:gap-3 text-muted-foreground">
+            <Wallet className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-xs sm:text-sm font-medium">Your Wallet</span>
+          </div>
+          <div className="flex items-baseline gap-1 sm:gap-2">
+            <span className="text-2xl sm:text-3xl font-bold">{formattedWalletBalance}</span>
+            <span className="text-muted-foreground text-sm sm:text-base">ETH</span>
+          </div>
         </div>
         <div className="stat-card border-primary/20">
-          <div className="flex items-center gap-3 text-muted-foreground"><Coins className="w-5 h-5 text-primary" /><span className="text-sm font-medium">Agent Wallet Balance</span></div>
-          <div className="flex items-baseline gap-2"><span className="text-3xl font-bold gradient-text">{formattedContractBalance}</span><span className="text-muted-foreground">ETH</span></div>
+          <div className="flex items-center gap-2 sm:gap-3 text-muted-foreground">
+            <Coins className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium">Agent Wallet Balance</span>
+          </div>
+          <div className="flex items-baseline gap-1 sm:gap-2">
+            <span className="text-2xl sm:text-3xl font-bold gradient-text">{formattedContractBalance}</span>
+            <span className="text-muted-foreground text-sm sm:text-base">ETH</span>
+          </div>
         </div>
       </div>
 
-      <div className="card-base p-6">
-        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2"><ArrowDownToLine className="w-5 h-5 text-primary" />Deposit ETH</h3>
+      <div className="card-base p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+          <ArrowDownToLine className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+          Deposit ETH
+        </h3>
         <div className="flex flex-col sm:flex-row gap-3">
-          <input type="number" placeholder="Amount in ETH" value={depositAmount} onChange={(e) => setDepositAmount(e.target.value)} className="input-base flex-1" step="0.001" min="0" />
-          <button onClick={handleDepositETH} disabled={isDepositing || isConfirmingDeposit} className="btn-primary flex items-center justify-center gap-2">
-            {isDepositing || isConfirmingDeposit ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}Deposit
+          <input
+            type="number"
+            placeholder="Amount in ETH"
+            value={depositAmount}
+            onChange={(e) => setDepositAmount(e.target.value)}
+            className="input-base flex-1 text-sm sm:text-base"
+            step="0.001"
+            min="0"
+          />
+          <button
+            onClick={handleDepositETH}
+            disabled={isDepositing || isConfirmingDeposit}
+            className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3"
+          >
+            {isDepositing || isConfirmingDeposit ? <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" /> : <Send className="w-3 h-3 sm:w-4 sm:h-4" />}
+            Deposit
           </button>
         </div>
       </div>
 
-      <div className="card-base p-6">
-        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2"><Coins className="w-5 h-5 text-primary" />Deposit ERC20 Token</h3>
+      <div className="card-base p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 flex items-center gap-2">
+          <Coins className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+          Deposit ERC20 Token
+        </h3>
         <div className="space-y-3">
-          <input type="text" placeholder="Token Contract Address (0x...)" value={erc20Token} onChange={(e) => setErc20Token(e.target.value)} className="input-base" />
+          <input
+            type="text"
+            placeholder="Token Contract Address (0x...)"
+            value={erc20Token}
+            onChange={(e) => setErc20Token(e.target.value)}
+            className="input-base text-sm sm:text-base"
+          />
           <div className="flex flex-col sm:flex-row gap-3">
-            <input type="number" placeholder="Amount" value={erc20Amount} onChange={(e) => setErc20Amount(e.target.value)} className="input-base flex-1" step="0.001" min="0" />
-            <button onClick={handleDepositERC20} disabled={isDepositingERC20 || isConfirmingERC20} className="btn-primary flex items-center justify-center gap-2">
-              {isDepositingERC20 || isConfirmingERC20 ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}Deposit Token
+            <input
+              type="number"
+              placeholder="Amount"
+              value={erc20Amount}
+              onChange={(e) => setErc20Amount(e.target.value)}
+              className="input-base flex-1 text-sm sm:text-base"
+              step="0.001"
+              min="0"
+            />
+            <button
+              onClick={handleDepositERC20}
+              disabled={isDepositingERC20 || isConfirmingERC20}
+              className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3"
+            >
+              {isDepositingERC20 || isConfirmingERC20 ? <Loader2 className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" /> : <Send className="w-3 h-3 sm:w-4 sm:h-4" />}
+              Deposit Token
             </button>
           </div>
         </div>
